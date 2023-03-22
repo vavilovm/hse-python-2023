@@ -1,0 +1,13 @@
+FROM python:3.9
+COPY main.py main.py
+RUN apt-get update
+RUN apt-get install texlive-latex-base texlive-lang-cyrillic graphviz -y
+RUN python3.9 -m pip install -i https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple ast-visualizer-vavilovm==1.0.4
+RUN python3.9 main.py
+RUN ls
+WORKDIR artifacts
+RUN ls
+RUN pdflatex file.tex
+RUN ls
+RUN rm file.aux file.log
+RUN ls

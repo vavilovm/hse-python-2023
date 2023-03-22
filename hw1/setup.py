@@ -1,8 +1,8 @@
 import setuptools
 
 setuptools.setup(
-    name='ast_visualizer',
-    version='1.0.3',
+    name='ast_visualizer_vavilovm',
+    version='1.0.4',
     author='Mark Vavilov',
     packages=['ast_visualizer'],
     url='https://github.com/vavilovm/hse-python-2023',
