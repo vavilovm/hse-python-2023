@@ -167,6 +167,9 @@ def create_ast_image(f):
         os.mkdir("artifacts")
     g.write_png('artifacts/graph.png')
 
+def create_fib_ast_image():
+    create_ast_image(fibonacci)
+
 
 if __name__ == '__main__':
-    create_ast_image(fibonacci)
+    create_fib_ast_image()
